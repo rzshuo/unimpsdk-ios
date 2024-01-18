@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.author             = { "wangzhitong" => "wangzhitong@dcloud.io" }
   # s.source       = { :path => "." }
   s.source       = { :git => "https://gitcode.net/dcloud/unimpsdk-ios", :tag => "#{s.version}"}
-  # s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '13.0'
 
   ### 基础库(必选)
 
