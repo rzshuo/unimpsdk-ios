@@ -252,7 +252,7 @@ Pod::Spec.new do |s|
     ss.frameworks = 'ImageIO'
     ss.vendored_libraries = 'UniMPSDK/Share/Libs/*.{a}'
     ss.libraries = 'sqlite3.0'
-    ss.dependency 'Weibo_SDK', '3.3.4'
+    ss.dependency 'Weibo_SDK', '3.3.5'
     ss.dependency 'unimp/Share'
   end
 
@@ -284,7 +284,7 @@ Pod::Spec.new do |s|
     ss.frameworks = 'ImageIO'
     ss.vendored_libraries = 'UniMPSDK/Oauth/Sina/Libs/*.{a}'
     ss.libraries = 'sqlite3.0'
-    ss.dependency 'Weibo_SDK', '3.3.4'
+    ss.dependency 'Weibo_SDK', '3.3.5'
     ss.dependency 'unimp/Oauth'
   end
 
