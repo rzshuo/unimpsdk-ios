@@ -2,7 +2,11 @@
 
 #source 'https://gitee.com/mirrors/CocoaPods-Specs.git'
 
-platform :ios, '12.0'
+
+source 'https://gitcode.net/dcloud/unimpsdk-ios'
+source 'https://github.com/Cocoapods/Specs.git'
+
+platform :ios, '13.0'
 
 target 'HelloUniMPDemo' do
 
@@ -30,20 +34,20 @@ target 'HelloUniMPDemo' do
 #    ## Payment
 #    pod 'unimp/Payment-IAP', :path => '../'
 #    pod 'unimp/Payment-AliPay', :path => '../'
-    pod 'unimp/Payment-Wechat', :path => '../'  ##如果使用微信支付功能 分享和登录必须用包含微信支付的库
+#    pod 'unimp/Payment-Wechat', :path => '../'  ##如果使用微信支付功能 分享和登录必须用包含微信支付的库
 #    pod 'unimp/Payment-Paypal', :path => '../'  ##iOS13.0+
 #    pod 'unimp/Payment-Stripe', :path => '../'  ##iOS13.0+
 #
 #    ## Share
-    pod 'unimp/Share-Wechat', :path => '../'       ##如果使用了微信支付，分享用这个
+#    pod 'unimp/Share-Wechat', :path => '../'       ##如果使用了微信支付，分享用这个
 #    pod 'unimp/Share-Wechat-Nopay', :path => '../' ##如果没有使用微信支付，分享用这个
 #    pod 'unimp/Share-QQ', :path => '../'
-#    pod 'unimp/Share-Sina', :path => '../'
+    pod 'unimp/Share-Sina', :path => '../'
 #
 #    ## Oauth
 #     pod 'unimp/Oauth-Google', :path => '../'
 #     pod 'unimp/Oauth-QQ', :path => '../'
-     pod 'unimp/Oauth-Facebook', :path => '../'    ##iOS12.0+
+#     pod 'unimp/Oauth-Facebook', :path => '../'    ##iOS12.0+
 #     pod 'unimp/Oauth-Wechat', :path => '../'       ##如果使用了微信支付，分享用这个
 #     pod 'unimp/Oauth-Wechat-Nopay', :path => '../' ##如果没有使用微信支付，分享用这个
 #     pod 'unimp/Oauth-Sina', :path => '../'

@@ -16,7 +16,6 @@ Pod::Spec.new do |s|
   s.author             = { "wangzhitong" => "wangzhitong@dcloud.io" }
   # s.source       = { :path => "." }
   s.source       = { :git => "https://gitcode.net/dcloud/unimpsdk-ios", :tag => "#{s.version}"}
-
   # s.ios.deployment_target = '11.0'
 
   ### 基础库(必选)
@@ -253,7 +252,7 @@ Pod::Spec.new do |s|
     ss.frameworks = 'ImageIO'
     ss.vendored_libraries = 'UniMPSDK/Share/Libs/*.{a}'
     ss.libraries = 'sqlite3.0'
-    ss.dependency 'Weibo_SDK', '3.3.5'
+    ss.dependency 'Weibo_SDK', '3.3.4'
     ss.dependency 'unimp/Share'
   end
 
@@ -285,7 +284,7 @@ Pod::Spec.new do |s|
     ss.frameworks = 'ImageIO'
     ss.vendored_libraries = 'UniMPSDK/Oauth/Sina/Libs/*.{a}'
     ss.libraries = 'sqlite3.0'
-    ss.dependency 'Weibo_SDK', '3.3.5'
+    ss.dependency 'Weibo_SDK', '3.3.4'
     ss.dependency 'unimp/Oauth'
   end
 
