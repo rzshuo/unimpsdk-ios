@@ -1,0 +1,61 @@
+# Uncomment the next line to define a global platform for your project
+
+#source 'https://gitee.com/mirrors/CocoaPods-Specs.git'
+
+platform :ios, '12.0'
+
+target 'HelloUniMPDemo' do
+
+    pod 'unimp/Core', :path => '../'
+#    pod 'unimp/Accelerometer', :path => '../'
+#    pod 'unimp/Audio', :path => '../'
+#    pod 'unimp/Contacts', :path => '../'
+#    pod 'unimp/Camera&Gallery', :path => '../'
+#    pod 'unimp/File', :path => '../'
+#    pod 'unimp/Video', :path => '../'
+#    pod 'unimp/NativeJS', :path => '../'
+#    pod 'unimp/Orientation', :path => '../'
+#    pod 'unimp/Message', :path => '../'
+#    pod 'unimp/Zip', :path => '../'
+#    pod 'unimp/Proximity', :path => '../'
+#    pod 'unimp/Sqlite', :path => '../'
+    
+#    ## 蓝牙
+#    pod 'unimp/IBeacon', :path => '../'
+#    pod 'unimp/BlueTooth', :path => '../'
+
+    ##  语音识别
+#    pod 'unimp/Speech-Baidu', :path => '../'
+#    
+#    ## Payment
+#    pod 'unimp/Payment-IAP', :path => '../'
+#    pod 'unimp/Payment-AliPay', :path => '../'
+    pod 'unimp/Payment-Wechat', :path => '../'  ##如果使用微信支付功能 分享和登录必须用包含微信支付的库
+#    pod 'unimp/Payment-Paypal', :path => '../'  ##iOS13.0+
+#    pod 'unimp/Payment-Stripe', :path => '../'  ##iOS13.0+
+#
+#    ## Share
+    pod 'unimp/Share-Wechat', :path => '../'       ##如果使用了微信支付，分享用这个
+#    pod 'unimp/Share-Wechat-Nopay', :path => '../' ##如果没有使用微信支付，分享用这个
+#    pod 'unimp/Share-QQ', :path => '../'
+#    pod 'unimp/Share-Sina', :path => '../'
+#
+#    ## Oauth
+#     pod 'unimp/Oauth-Google', :path => '../'
+#     pod 'unimp/Oauth-QQ', :path => '../'
+     pod 'unimp/Oauth-Facebook', :path => '../'    ##iOS12.0+
+#     pod 'unimp/Oauth-Wechat', :path => '../'       ##如果使用了微信支付，分享用这个
+#     pod 'unimp/Oauth-Wechat-Nopay', :path => '../' ##如果没有使用微信支付，分享用这个
+#     pod 'unimp/Oauth-Sina', :path => '../'
+     
+     ## Statistic
+#    pod 'unimp/Statistic-Umeng', :path => '../'
+#
+#    ## Map 二选一
+#    pod 'unimp/Map-Gaode', :path => '../'
+#    pod 'unimp/Map-Baidu', :path => '../'
+#    
+#    ## Location 二选一
+#    pod 'unimp/Geolocation-Gaode', :path => '../'
+#    pod 'unimp/Geolocation-Baidu', :path => '../'
+end
