@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
   # s.source       = { :path => "." }
   s.source       = { :git => "https://gitcode.net/dcloud/unimpsdk-ios.git", :tag => "#{s.version}"}
 
+  s.default_subspec = 'Core'
 
   ### 基础库(必选)
 

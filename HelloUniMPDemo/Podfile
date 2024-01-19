@@ -2,33 +2,34 @@
 
 #source 'https://gitee.com/mirrors/CocoaPods-Specs.git'
 
-
+source 'https://github.com/Cocoapods/Specs.git'
 source 'https://gitcode.net/dcloud/unimpsdk-ios.git'
 
-platform :ios, '13.0'
 
 target 'HelloUniMPDemo' do
   ## 判断需要引用哪些模块请参考文档:https://nativesupport.dcloud.net.cn/AppDocs/usemodule/iOSModuleConfig/common.html#%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9D%97-%E4%B8%89%E6%96%B9sdk
   ## 根据功能对照表添加，建议一次不要Pod太多模块容易超时
-  pod 'unimp', :git => "https://gitcode.net/dcloud/unimpsdk-ios.git", :subspecs => [
-        'Core',
-        'Accelerometer',      ##加速度传感器
-        'Contacts',           ##通讯录
-        'Audio',              ##音频
-        'Camera&Gallery',     ##相机&相册
-        'File',               ##文件
-        'Video',              ##视频播放
-        'LivePusher',         ##直播推流
-        'NativeJS',           ##JS Reflection call Native
-        'Orientation',        ##设备方向
-        'Message',            ##邮件消息
-        'Zip',                ##压缩
-        'Proximity',          ##距离传感器
-        'Sqlite',             ##数据库
-        'XMLHttpRequest',     ##网络请求
-        'Fingerprint',        ##指纹识别
-        'FaceId',             ##人脸识别
-        'IBeacon',            ##底功耗蓝牙
+  
+#  pod 'unimp', :path => "../", :subspecs => [
+  pod 'unimp', :git => "https://gitcode.net/dcloud/unimpsdk-ios.git", :tag => "3.99", :subspecs => [
+        'Core',               ##核心库(必需)
+#        'Accelerometer',      ##加速度传感器
+#        'Contacts',           ##通讯录
+#        'Audio',              ##音频
+#        'Camera&Gallery',     ##相机&相册
+#        'File',               ##文件
+#        'Video',              ##视频播放
+#        'LivePusher',         ##直播推流
+#        'NativeJS',           ##JS Reflection call Native
+#        'Orientation',        ##设备方向
+#        'Message',            ##邮件消息
+#        'Zip',                ##压缩
+#        'Proximity',          ##距离传感器
+#        'Sqlite',             ##数据库
+#        'XMLHttpRequest',     ##网络请求
+#        'Fingerprint',        ##指纹识别
+#        'FaceId',             ##人脸识别
+#        'IBeacon',            ##底功耗蓝牙
 #        'BlueTooth',          ##蓝牙
 #        'Speech-Baidu',       ##语音识别-百度
 #        'Statistic-Umeng',    ##友盟统计
