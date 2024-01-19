@@ -12,7 +12,6 @@ target 'HelloUniMPDemo' do
 
   pod 'unimp', :git => "https://gitcode.net/dcloud/unimpsdk-ios.git", :tag => "3.99", :subspecs => [
         'Core',               ##核心库(必需)
-#        'Log',                ##Debug模式下打印log 发布时可去掉
 #        'Accelerometer',      ##加速度传感器
 #        'Contacts',           ##通讯录
 #        'Audio',              ##音频
@@ -29,6 +28,7 @@ target 'HelloUniMPDemo' do
 #        'XMLHttpRequest',     ##网络请求
 #        'Fingerprint',        ##指纹识别
 #        'FaceId',             ##人脸识别
+#        'Log',                ##打印Console.log日志，发布时可移除
 #        'IBeacon',            ##底功耗蓝牙
 #        'BlueTooth',          ##蓝牙
 #        'Speech-Baidu',       ##语音识别-百度
