@@ -1,6 +1,3 @@
-# Uncomment the next line to define a global platform for your project
-
-#source 'https://gitee.com/mirrors/CocoaPods-Specs.git'
 
 source 'https://github.com/Cocoapods/Specs.git'
 source 'https://gitcode.net/dcloud/unimpsdk-ios.git'
@@ -12,12 +9,10 @@ target 'HelloUniMPDemo' do
   ## 根据功能对照表添加，建议一次不要Pod太多模块容易超时
   ## Core、Video、LivePusher、Camera&Gallery、Map-XXX 等模块文件较大建议单独pod install
   ## Payment-Stripe、Payment-Paypal、Oauth-Google、Oauth-Facebook 为海外SDK建议设置代理后pod install
-  
-  ##本地引用
-#  pod 'unimp', :path => "../", :subspecs => [
 
   pod 'unimp', :git => "https://gitcode.net/dcloud/unimpsdk-ios.git", :tag => "3.99", :subspecs => [
         'Core',               ##核心库(必需)
+#        'Log',                ##Debug模式下打印log 发布时可去掉
 #        'Accelerometer',      ##加速度传感器
 #        'Contacts',           ##通讯录
 #        'Audio',              ##音频
@@ -64,6 +59,7 @@ target 'HelloUniMPDemo' do
 #        'Oauth-Sina',         ##新浪微博登录
 #        'Oauth-Google',       ##Google登录
 #        'Oauth-Facebook',     ##Facebook登录 iOS12+
+
   ]
 
 end

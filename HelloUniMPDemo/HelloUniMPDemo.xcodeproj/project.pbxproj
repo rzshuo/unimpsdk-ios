@@ -159,7 +159,6 @@
 				2F8F66FE2B568AB4003E6DCC /* Sources */,
 				2F8F66FF2B568AB4003E6DCC /* Frameworks */,
 				2F8F67002B568AB4003E6DCC /* Resources */,
-				0077D58063A7D1947C3D0C98 /* [CP] Embed Pods Frameworks */,
 				BFF9F57BCF0484F206111522 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -220,23 +219,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0077D58063A7D1947C3D0C98 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HelloUniMPDemo/Pods-HelloUniMPDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HelloUniMPDemo/Pods-HelloUniMPDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelloUniMPDemo/Pods-HelloUniMPDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		15E3B50BBE06F99B7E6CAAA5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

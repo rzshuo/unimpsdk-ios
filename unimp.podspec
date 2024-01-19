@@ -10,13 +10,11 @@ Pod::Spec.new do |s|
 
   s.name         = "unimp"
   s.version      = "3.99"
-  s.summary      = "A short description of unimp."
+  s.summary      = "UniMPSDK"
   s.homepage     = "https://gitcode.net/dcloud/unimpsdk-ios"
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author             = { "wangzhitong" => "wangzhitong@dcloud.io" }
-  # s.source       = { :path => "." }
   s.source       = { :git => "https://gitcode.net/dcloud/unimpsdk-ios.git", :tag => "#{s.version}"}
-
   s.default_subspec = 'Core'
 
   ### 基础库(必选)
@@ -32,7 +30,7 @@ Pod::Spec.new do |s|
     ss.libraries = 'c++','iconv'
   end
 
-  ### 组件
+  ### 子模块
 
   s.subspec 'Accelerometer' do |ss|
     ss.frameworks = 'Accelerate'
@@ -341,25 +339,29 @@ Pod::Spec.new do |s|
     ss.dependency 'unimp/Statistic'
   end
 
-s.subspec 'Masonry' do |ss|
-  ss.public_header_files = 'UniMPSDK/Masonry/Headers/**/*{.h,.swift}'
-  ss.source_files = 'UniMPSDK/Masonry/Headers/**/*.{h,swift}'
-  ss.vendored_frameworks = 'UniMPSDK/Masonry/Libs/*.{framework}'
-end
+  s.subspec 'Log' do |ss|
+    ss.source_files = 'UniMPSDK/Log/Headers/**/*.{h,swift}'
+  end
 
-s.subspec 'BaiduMapCommon' do |ss|
-  ss.vendored_libraries = 'UniMPSDK/BaiduMapCommon/Libs/*.{a}'
-end
+  s.subspec 'Masonry' do |ss|
+    ss.public_header_files = 'UniMPSDK/Masonry/Headers/**/*{.h,.swift}'
+    ss.source_files = 'UniMPSDK/Masonry/Headers/**/*.{h,swift}'
+    ss.vendored_frameworks = 'UniMPSDK/Masonry/Libs/*.{framework}'
+  end
 
-s.subspec 'Wechat-Nopay' do |ss|
-  ss.public_header_files = 'UniMPSDK/Wechat-Nopay/Headers/**/*{.h,.swift}'
-  ss.source_files = 'UniMPSDK/Wechat-Nopay/Headers/**/*.{h,swift}'
-  ss.vendored_libraries = 'UniMPSDK/Wechat-Nopay/Libs/*.{a}'
-end
+  s.subspec 'BaiduMapCommon' do |ss|
+    ss.vendored_libraries = 'UniMPSDK/BaiduMapCommon/Libs/*.{a}'
+  end
 
-s.subspec 'QQ' do |ss|
-  ss.vendored_frameworks = 'UniMPSDK/QQ/Libs/*.{framework}'
-end
+  s.subspec 'Wechat-Nopay' do |ss|
+    ss.public_header_files = 'UniMPSDK/Wechat-Nopay/Headers/**/*{.h,.swift}'
+    ss.source_files = 'UniMPSDK/Wechat-Nopay/Headers/**/*.{h,swift}'
+    ss.vendored_libraries = 'UniMPSDK/Wechat-Nopay/Libs/*.{a}'
+  end
+
+  s.subspec 'QQ' do |ss|
+    ss.vendored_frameworks = 'UniMPSDK/QQ/Libs/*.{framework}'
+  end
   
 
 
