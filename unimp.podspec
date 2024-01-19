@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author             = { "wangzhitong" => "wangzhitong@dcloud.io" }
   # s.source       = { :path => "." }
-  s.source       = { :git => "https://gitcode.net/dcloud/unimpsdk-ios", :tag => "#{s.version}"}
-  s.ios.deployment_target = '13.0'
+  s.source       = { :git => "https://gitcode.net/dcloud/unimpsdk-ios.git", :tag => "#{s.version}"}
+
 
   ### 基础库(必选)
 
@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
   s.subspec 'Accelerometer' do |ss|
     ss.frameworks = 'Accelerate'
     ss.vendored_libraries = 'UniMPSDK/Accelerometer/Libs/*.{a}'
-    ss.vendored_frameworks = 'UniMPSDK/Accelerometer/Libs/*.{framework}'  
+    ss.vendored_frameworks = 'UniMPSDK/Accelerometer/Libs/*.{framework}'
   end
 
   s.subspec 'Audio' do |ss|
