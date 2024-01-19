@@ -260,7 +260,6 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Share-QQ' do |ss|
-    ss.resources = 'uniapp/Assets/Share/QQ/*'
     ss.vendored_libraries = 'UniMPSDK/Share/QQ/Libs/*.{a}'
     ss.vendored_frameworks = 'UniMPSDK/Share/QQ/Libs/*.{framework}'
     ss.dependency 'unimp/QQ'
@@ -333,14 +332,14 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Statistic-Umeng' do |ss|
-    ss.vendored_libraries = 'uniapp/Frameworks/Statistic/Umeng/*.{a}'
+    ss.vendored_libraries = 'UniMPSDK/Statistic/Umeng/Libs/*.{a}'
     ss.dependency  'UMCommon','7.4.2'
     ss.dependency  'UMAPM','1.8.4'
     ss.dependency 'unimp/Statistic'
   end
 
   s.subspec 'Log' do |ss|
-    ss.source_files = 'UniMPSDK/Log/Headers/**/*.{h,swift}'
+    ss.vendored_libraries = 'UniMPSDK/Log/Libs/*.{a}'
   end
 
   s.subspec 'Masonry' do |ss|
