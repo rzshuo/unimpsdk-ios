@@ -22,12 +22,14 @@ Pod::Spec.new do |s|
   ### 基础库(必选)
 
   s.subspec 'Core' do |ss|
+    ss.public_header_files = 'UniMPSDK/Core/Headers/**/*.{h,swift}'
+    ss.source_files = 'UniMPSDK/Core/Headers/**/*.{h,swift}'
     ss.frameworks = 'UIKit', 'CoreText','JavaScriptCore','WebKit','CoreTelephony','MediaPlayer','QuartzCore','CFNetwork',
     'Foundation','CoreFoundation','CoreGraphics','QuickLook'
     ss.vendored_libraries = 'UniMPSDK/Core/Libs/*.{a}'
     ss.vendored_frameworks = 'UniMPSDK/Core/Libs/*.{framework}'
     ss.resources = 'UniMPSDK/Core/Resources/*'
-    ss.public_header_files = 'UniMPSDK/Core/Headers/**/*.{h,swift}'
+    
     ss.libraries = 'c++','iconv'
   end
 
@@ -47,6 +49,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Camera&Gallery' do |ss|
     ss.public_header_files = 'UniMPSDK/Camera&Gallery/Headers/**/*.{h,swift}'
+    ss.source_files = 'UniMPSDK/Camera&Gallery/Headers/**/*.{h,swift}'
     ss.resources = 'UniMPSDK/Camera&Gallery/Resources/*'
     ss.frameworks = 'AssetsLibrary','Photos','CoreMedia','MetalKit','GLKit'
     ss.vendored_libraries = 'UniMPSDK/Camera&Gallery/Libs/*.{a}'
@@ -123,7 +126,8 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Barcode' do |ss|
-    s.public_header_files = 'UniMPSDK/Barcode/Headers/**/*{.h,.swift}'
+    ss.public_header_files = 'UniMPSDK/Barcode/Headers/**/*{.h,.swift}'
+    ss.source_files = 'UniMPSDK/Barcode/Headers/**/*.{h,swift}'
     ss.frameworks = 'AVFoundation','ImageIO','CoreVideo','CoreMedia'
     ss.vendored_libraries = 'UniMPSDK/Barcode/Libs/*.{a}'
     ss.libraries = 'iconv.2'
@@ -131,6 +135,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Video' do |ss|
     ss.public_header_files = 'UniMPSDK/Video/Headers/**/*{.h,.swift}'
+    ss.source_files = 'UniMPSDK/Video/Headers/**/*.{h,swift}'
     ss.frameworks = 'AudioToolbox','AVFoundation',
     'CoreGraphics','CoreMedia','VideoToolbox',
     'VideoToolbox','MediaPlayer','MobileCoreServices',
@@ -339,6 +344,7 @@ Pod::Spec.new do |s|
 
 s.subspec 'Masonry' do |ss|
   ss.public_header_files = 'UniMPSDK/Masonry/Headers/**/*{.h,.swift}'
+  ss.source_files = 'UniMPSDK/Masonry/Headers/**/*.{h,swift}'
   ss.vendored_frameworks = 'UniMPSDK/Masonry/Libs/*.{framework}'
 end
 
@@ -348,6 +354,7 @@ end
 
 s.subspec 'Wechat-Nopay' do |ss|
   ss.public_header_files = 'UniMPSDK/Wechat-Nopay/Headers/**/*{.h,.swift}'
+  ss.source_files = 'UniMPSDK/Wechat-Nopay/Headers/**/*.{h,swift}'
   ss.vendored_libraries = 'UniMPSDK/Wechat-Nopay/Libs/*.{a}'
 end
 

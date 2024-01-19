@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SplashView" customModule="UniMPSwiftDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unilogo" translatesAutoresizingMaskIntoConstraints="NO" id="vTs-jt-cOp">
+                    <rect key="frame" x="171" y="100" width="72" height="72"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="72" id="iZD-Rz-fsb"/>
+                        <constraint firstAttribute="height" constant="72" id="rg7-La-gfh"/>
+                    </constraints>
+                </imageView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Md6-fJ-A7j">
+                    <rect key="frame" x="197" y="202" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Md6-fJ-A7j" firstAttribute="centerX" secondItem="vTs-jt-cOp" secondAttribute="centerX" id="A2v-a3-5eG"/>
+                <constraint firstItem="Md6-fJ-A7j" firstAttribute="top" secondItem="vTs-jt-cOp" secondAttribute="bottom" constant="30" id="jgQ-BF-fGI"/>
+                <constraint firstItem="vTs-jt-cOp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="ks8-Up-c4A"/>
+                <constraint firstItem="vTs-jt-cOp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="r7L-PX-3uc"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="unilogo" width="36" height="36"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
