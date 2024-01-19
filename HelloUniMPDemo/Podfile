@@ -7,12 +7,15 @@ source 'https://gitcode.net/dcloud/unimpsdk-ios.git'
 
 
 target 'HelloUniMPDemo' do
+  
   ## 判断需要引用哪些模块请参考文档:https://nativesupport.dcloud.net.cn/AppDocs/usemodule/iOSModuleConfig/common.html#%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9D%97-%E4%B8%89%E6%96%B9sdk
   ## 根据功能对照表添加，建议一次不要Pod太多模块容易超时
   ## Core、Video、LivePusher、Camera&Gallery、Map-XXX 等模块文件较大建议单独pod install
   ## Payment-Stripe、Payment-Paypal、Oauth-Google、Oauth-Facebook 为海外SDK建议设置代理后pod install
-#  pod 'unimp', :git => "https://gitcode.net/dcloud/unimpsdk-ios.git", :tag => "3.99"
+  
+  ##本地引用
 #  pod 'unimp', :path => "../", :subspecs => [
+
   pod 'unimp', :git => "https://gitcode.net/dcloud/unimpsdk-ios.git", :tag => "3.99", :subspecs => [
         'Core',               ##核心库(必需)
 #        'Accelerometer',      ##加速度传感器
@@ -46,21 +49,21 @@ target 'HelloUniMPDemo' do
 #        'Payment-IAP',        ##苹果内购
 #        'Payment-AliPay',     ##支付宝支付
 #        'Payment-Wechat',     ##微信支付-同时使用微信分享或登录,必需使用包含支付的依赖库
-        'Payment-Paypal',     ##Paypal支付 iOS13+
+#        'Payment-Paypal',     ##Paypal支付 iOS13+
 #        'Payment-Stripe',     ##stripe支付 iOS13+ 依赖库较大如果超时建议使用代理
 #        ##分享
 #        'Share-Wechat',       ##微信分享-包含支付
-#        'Share-WechatNopay',  ##微信分享-不包含支付
+#        'Share-Wechat-Nopay', ##微信分享-不包含支付
 #        'Share-QQ',           ##QQ分享
 #        'Share-Sina',         ##新浪微博分享
 #        ##登录
 #        'Oauth-Apple',        ##苹果登录
 #        'Oauth-QQ',           ##QQ登录
 #        'Oauth-Wechat',       ##微信登录-包含支付
-#        'Oauth-WechatNopay',  ##微信登录-不包含支付
+#        'Oauth-Wechat-Nopay', ##微信登录-不包含支付
 #        'Oauth-Sina',         ##新浪微博登录
 #        'Oauth-Google',       ##Google登录
-        'Oauth-Facebook',     ##Facebook登录 iOS12+
+#        'Oauth-Facebook',     ##Facebook登录 iOS12+
   ]
 
 end

@@ -29,7 +29,6 @@ Pod::Spec.new do |s|
     ss.vendored_libraries = 'UniMPSDK/Core/Libs/*.{a}'
     ss.vendored_frameworks = 'UniMPSDK/Core/Libs/*.{framework}'
     ss.resources = 'UniMPSDK/Core/Resources/*'
-    
     ss.libraries = 'c++','iconv'
   end
 
@@ -276,7 +275,7 @@ Pod::Spec.new do |s|
     ss.dependency 'unimp/Share'
   end
 
-  s.subspec 'Share-Wechat-NoPay' do |ss|
+  s.subspec 'Share-Wechat-Nopay' do |ss|
     ss.vendored_libraries = 'UniMPSDK/Share/Wechat/Libs/*.{a}'
     ss.dependency 'unimp/Wechat-Nopay'
     ss.dependency 'unimp/Share'
@@ -307,7 +306,7 @@ Pod::Spec.new do |s|
     ss.dependency 'unimp/Oauth'
   end
 
-  s.subspec 'Oauth-Wechat-NoPay' do |ss|
+  s.subspec 'Oauth-Wechat-Nopay' do |ss|
     ss.vendored_libraries = 'UniMPSDK/Oauth/Wechat/Libs/*.{a}'
     ss.dependency 'unimp/Wechat-Nopay'
     ss.dependency 'unimp/Oauth'
