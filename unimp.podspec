@@ -245,7 +245,6 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Share-Sina' do |ss|
-    ss.resources = 'UniMPSDK/Share/Sina/Resources/*'
     ss.frameworks = 'ImageIO'
     ss.vendored_libraries = 'UniMPSDK/Share/Libs/*.{a}'
     ss.libraries = 'sqlite3.0'
@@ -255,7 +254,6 @@ Pod::Spec.new do |s|
 
   s.subspec 'Share-QQ' do |ss|
     ss.vendored_libraries = 'UniMPSDK/Share/QQ/Libs/*.{a}'
-    ss.vendored_frameworks = 'UniMPSDK/Share/QQ/Libs/*.{framework}'
     ss.dependency 'unimp/QQ'
     ss.dependency 'unimp/Share'
   end
