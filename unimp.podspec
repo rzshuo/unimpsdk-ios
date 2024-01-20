@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.author             = { "wangzhitong" => "wangzhitong@dcloud.io" }
   s.source       = { :git => "https://gitcode.net/dcloud/unimpsdk-ios.git", :tag => "#{s.version}"}
   s.default_subspec = 'Core'
-  s.platform     = :ios, "11.0"
+  s.platform     = :ios
 
   ### 基础库(必选)
 
@@ -230,13 +230,13 @@ Pod::Spec.new do |s|
 
   s.subspec 'Payment-Paypal' do |ss|
     ss.vendored_libraries = 'UniMPSDK/Payment/Paypal/Libs/*.{a}'
-    # ss.dependency 'PayPalCheckout','1.2.0'
+    ss.dependency 'PayPalCheckout','1.2.0'
     ss.dependency 'unimp/Payment'
   end
 
   s.subspec 'Payment-Stripe' do |ss|
     ss.vendored_libraries = 'UniMPSDK/Payment/Stripe/Libs/*.{a}'
-    # ss.dependency 'Stripe','23.18.2'
+    ss.dependency 'Stripe','23.18.2'
     ss.dependency 'unimp/Payment'
   end
 
@@ -315,7 +315,8 @@ Pod::Spec.new do |s|
 
   s.subspec 'Oauth-Facebook' do |ss|
     ss.vendored_libraries = 'UniMPSDK/Oauth/Facebook/Libs/*.{a}'
-    # ss.dependency 'FBSDKLoginKit','16.2.1'
+    
+    ss.dependency 'FBSDKLoginKit','16.2.1'
     ss.dependency 'unimp/Oauth'
   end
 
