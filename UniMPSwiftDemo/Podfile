@@ -1,7 +1,6 @@
 # Uncomment the next line to define a global platform for your project
 
 #source 'https://gitee.com/mirrors/CocoaPods-Specs.git'
-
 source 'https://github.com/Cocoapods/Specs.git'
 source 'https://gitcode.net/dcloud/unimpsdk-ios.git'
 
@@ -15,6 +14,7 @@ target 'UniMPSwiftDemo' do
 #  pod 'unimp', :path => "../", :subspecs => [
   pod 'unimp', :git => "https://gitcode.net/dcloud/unimpsdk-ios.git", :tag => "3.99", :subspecs => [
         'Core',               ##核心库(必需)
+        'Log',                ##
 #        'Accelerometer',      ##加速度传感器
 #        'Contacts',           ##通讯录
 #        'Audio',              ##音频

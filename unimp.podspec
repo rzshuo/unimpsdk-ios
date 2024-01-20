@@ -16,6 +16,7 @@ Pod::Spec.new do |s|
   s.author             = { "wangzhitong" => "wangzhitong@dcloud.io" }
   s.source       = { :git => "https://gitcode.net/dcloud/unimpsdk-ios.git", :tag => "#{s.version}"}
   s.default_subspec = 'Core'
+  s.platform     = :ios, "11.0"
 
   ### 基础库(必选)
 
@@ -35,7 +36,6 @@ Pod::Spec.new do |s|
   s.subspec 'Accelerometer' do |ss|
     ss.frameworks = 'Accelerate'
     ss.vendored_libraries = 'UniMPSDK/Accelerometer/Libs/*.{a}'
-    ss.vendored_frameworks = 'UniMPSDK/Accelerometer/Libs/*.{framework}'
   end
 
   s.subspec 'Audio' do |ss|
@@ -50,7 +50,6 @@ Pod::Spec.new do |s|
     ss.resources = 'UniMPSDK/Camera&Gallery/Resources/*'
     ss.frameworks = 'AssetsLibrary','Photos','CoreMedia','MetalKit','GLKit'
     ss.vendored_libraries = 'UniMPSDK/Camera&Gallery/Libs/*.{a}'
-    ss.vendored_frameworks = 'UniMPSDK/Camera&Gallery/Libs/*.{framework}'  
   end
 
   s.subspec 'Contacts' do |ss|
@@ -152,7 +151,6 @@ Pod::Spec.new do |s|
   s.subspec 'Geolocation-Baidu' do |ss|
     ss.frameworks = 'SystemConfiguration','Security'
     ss.vendored_libraries = 'UniMPSDK/Geolocation/Baidu/Libs/*.{a}'
-    ss.vendored_frameworks = 'UniMPSDK/Geolocation/Baidu/Libs/*.{framework}'
     ss.libraries = 'c++','sqlite3.0' 
     ss.dependency 'unimp/Geolocation'
     ss.dependency 'BMKLocationKit', '2.0.9'
@@ -162,7 +160,6 @@ Pod::Spec.new do |s|
   s.subspec 'Geolocation-Gaode' do |ss|
     ss.frameworks = 'ExternalAccessory','GLKit','security','CoreTelephony','SystemConfiguration'
     ss.vendored_libraries = 'UniMPSDK/Geolocation/Gaode/Libs/*.{a}'
-    ss.vendored_frameworks = 'UniMPSDK/Geolocation/Gaode/Libs/*.{framework}'
     ss.libraries = 'c++','z'
     ss.dependency 'AMapLocation','2.10.0'
     ss.dependency 'AMapSearch', '9.7.0'
@@ -177,9 +174,7 @@ Pod::Spec.new do |s|
   s.subspec 'Map-Baidu' do |ss|
     ss.frameworks = 'QuartzCore','CoreGraphics','CoreTelephony',
     'SystemConfiguration','Security','OpenGLES'
-    ss.resources = 'UniMPSDK/Map/Baidu/Resources/*'
     ss.vendored_libraries = 'UniMPSDK/Map/Baidu/Libs/*.{a}'
-    ss.vendored_frameworks = 'UniMPSDK/Map/Baidu/Libs/*.{framework}'
     ss.libraries = 'c++','sqlite3.0'
     ss.dependency 'BaiduMapKit', '6.6.0'
     ss.dependency 'unimp/BaiduMapCommon'
@@ -189,7 +184,6 @@ Pod::Spec.new do |s|
   s.subspec 'Map-Gaode' do |ss|
     ss.resources = 'UniMPSDK/Map/Gaode/Resources/*'
     ss.vendored_libraries = 'UniMPSDK/Map/Gaode/Libs/*.{a}'
-    ss.vendored_frameworks = 'UniMPSDK/Map/Gaode/Libs/*.{framework}'
     ss.libraries = 'c++'
     ss.dependency  'AMap3DMap','9.7.0'
     ss.dependency 'unimp/Masonry'
