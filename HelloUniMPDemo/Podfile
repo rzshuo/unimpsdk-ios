@@ -1,16 +1,14 @@
 #source 'https://gitee.com/mirrors/CocoaPods-Specs.git'
 #source 'https://github.com/Cocoapods/Specs.git'
-#source 'https://gitcode.net/dcloud/unimpsdk-ios.git'
-#source 'https://cdn.cocoapods.org/'
+source 'https://cdn.cocoapods.org/'
 
 target 'HelloUniMPDemo' do
   
   ## 判断需要引用哪些模块请参考文档:https://nativesupport.dcloud.net.cn/AppDocs/usemodule/iOSModuleConfig/common.html#%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9D%97-%E4%B8%89%E6%96%B9sdk
   ## 根据功能对照表添加，建议一次不要Pod太多模块容易超时
-  ## Core、Video、LivePusher、Camera&Gallery、Map-XXX 等模块文件较大建议单独pod install
   ## Payment-Stripe、Payment-Paypal、Oauth-Google、Oauth-Facebook 为海外SDK建议设置代理后pod install
 
-  pod 'unimp', :git => "https://gitcode.net/dcloud/unimpsdk-ios.git", :tag => "3.99", :subspecs => [
+  pod 'unimp', :subspecs => [
         'Core',               ##核心库(必需)
 #        'Accelerometer',      ##加速度传感器
 #        'Contacts',           ##通讯录
