@@ -12,12 +12,12 @@ target 'HelloUniMPDemo' do
         'Core',               ##核心库(必需)
 #        'Accelerometer',      ##加速度传感器
 #        'Contacts',           ##通讯录
-#        'Audio',              ##音频
+        'Audio',              ##音频
 #        'Camera&Gallery',     ##相机&相册
-#        'File',               ##文件
+        'File',               ##文件
 #        'Video',              ##视频播放
 #        'LivePusher',         ##直播推流
-#        'NativeJS',           ##JS Reflection call Native
+        'NativeJS',           ##JS Reflection call Native
 #        'Orientation',        ##设备方向
 #        'Message',            ##邮件消息
 #        'Zip',                ##压缩
@@ -28,7 +28,7 @@ target 'HelloUniMPDemo' do
 #        'FaceId',             ##人脸识别
 #        'Log',                ##打印Console.log日志，发布时可移除
 #        'IBeacon',            ##底功耗蓝牙
-#        'BlueTooth',          ##蓝牙
+        'BlueTooth',          ##蓝牙
 #        'Speech-Baidu',       ##语音识别-百度
 #        'Statistic-Umeng',    ##友盟统计
         ##定位模块(百度高德不能同时引用)
