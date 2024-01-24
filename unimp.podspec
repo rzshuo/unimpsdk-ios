@@ -246,7 +246,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Share-Sina' do |ss|
     ss.frameworks = 'ImageIO'
-    ss.vendored_libraries = 'UniMPSDK/Share/Libs/*.{a}'
+    ss.vendored_libraries = 'UniMPSDK/Share/Sina/Libs/*.{a}'
     ss.libraries = 'sqlite3.0'
     ss.dependency 'Weibo_SDK', '3.3.5'
     ss.dependency 'unimp/Share'
