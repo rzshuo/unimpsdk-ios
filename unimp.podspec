@@ -334,6 +334,13 @@ Pod::Spec.new do |s|
     ss.vendored_libraries = 'UniMPSDK/Log/Libs/*.{a}'
   end
 
+  s.subspec 'Canvas' do |ss|
+    ss.frameworks = 'OpenGLES'
+    ss.vendored_libraries = 'UniMPSDK/Canvas/Libs/*.{a}'
+  end
+
+  ## 子模块公用依赖
+
   s.subspec 'Masonry' do |ss|
     ss.public_header_files = 'UniMPSDK/Masonry/Headers/**/*{.h,.swift}'
     ss.source_files = 'UniMPSDK/Masonry/Headers/**/*.{h,swift}'
